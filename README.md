@@ -56,29 +56,29 @@ adicionar grupos de usuários do sistema
 /security/grupo/adicionar                                                                                                   
 editar grupos de usuário do sistema conforme um numero de ID                                                                 
 /security/grupo/editar/ID                                                                                                    
-exclui grupos de usuário do sistema conforme um numero de ID
-/security/grupo/excluir/ID
-
-Gerenciar Usuário/Funcionário
-
-lista os usuários / funcionários do sistema que não é do grupo Super Administrador
-/security/funcionario
-adicionar dados de usuário / funcionário do sistema
-/security/funcionario/adicionar
-editar dados de usuário / funcionário do sistema conforme um numro de ID
-/security/funcionario/editar/ID
-exclui dados de usuário / funcionário conforme um numero de ID
-/security/funcionario/excluir/ID
-
-Gerenciar Permissões de um Grupo (ACL)
-
-lista os grupos possíveis para aplicar a eles os controles de acesso da ACL
-/security/permissao
-exibe as permissões de acesso aos recursos do sitema conforme um numero de ID de grupo do usuário
-/security/permissao/gerenciar/ID
-recurso que salva as permissões configuradas e enviadas via POST para um ID grupo de usuário
-/security/permissao/editar/ID
-
+exclui grupos de usuário do sistema conforme um numero de ID                                                                
+/security/grupo/excluir/ID                                                                                                   
+                                                                                                                             
+Gerenciar Usuário/Funcionário                                                                                                
+                                                                                                                             
+lista os usuários / funcionários do sistema que não é do grupo Super Administrador                                           
+/security/funcionario                                                                                                        
+adicionar dados de usuário / funcionário do sistema                                                                         
+/security/funcionario/adicionar                                                                                              
+editar dados de usuário / funcionário do sistema conforme um numro de ID                                                    
+/security/funcionario/editar/ID                                                                                             
+exclui dados de usuário / funcionário conforme um numero de ID                                                               
+/security/funcionario/excluir/ID                                                                                             
+                                                                                                                             
+Gerenciar Permissões de um Grupo (ACL)                                                                                      
+                                                                                                                            
+lista os grupos possíveis para aplicar a eles os controles de acesso da ACL                                                  
+/security/permissao                                                                                                          
+exibe as permissões de acesso aos recursos do sitema conforme um numero de ID de grupo do usuário                            
+/security/permissao/gerenciar/ID                                                                                             
+recurso que salva as permissões configuradas e enviadas via POST para um ID grupo de usuário                                 
+/security/permissao/editar/ID                                                                                                 
+                                                                                                                            
 
 #Considerações finais
 
