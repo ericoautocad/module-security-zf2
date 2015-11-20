@@ -1,0 +1,76 @@
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Funcionários</div>
+    <div class="panel-body">
+
+        <?php if( $this->flashMessenger()->hasMessages('success') ): ?>
+            <?php  echo $this->flashMessenger()->render('success', array('alert', 'alert-dismissible', 'alert-success')); ?>
+        <?php endif; ?>
+        <?php if( $this->flashMessenger()->hasMessages('error') ): ?>
+            <?php  echo $this->flashMessenger()->render('error', array('alert', 'alert-dismissible', 'alert-danger')); ?>
+        <?php endif; ?>
+
+        <div class="">
+            <a id="btnAdd" class="btn btn-primary" href="<?php echo $this->basePath();?>/security/funcionario/adicionar">Adicionar Funcionário</a>
+        </div>
+        <!-- Table -->
+        <table class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Pefil</th>
+                <th>Opções</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php if(count($list)): ?>
+                <?php foreach($list as $funcionario): ?>
+                    <tr>
+                        <th scope="row"><?php echo $funcionario["id"]; ?></th>
+                        <td style="width: 80%;"><?php echo $funcionario["nome"]; ?></td>
+                        <td style="width: 5%;"><?php echo $funcionario["grupo"]; ?></td>
+                        <td style="width: 5%;">
+                            <a title="Editar Funcionário"  href="/security/funcionario/editar/<?php echo $funcionario["id"]; ?>"><i class="glyphicon glyphicon-pencil"></i></a>
+                            <a title="Remover Funcionário" href= "/security/funcionario/excluir/<?php echo $funcionario["id"]; ?>" <i class="glyphicon glyphicon-trash"></i></a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+                <?php echo $this->paginationControl($list,'Sliding','partials/paginator', array('route' =>'admin/paginator')); ?>
+            <?php endif; ?>
+
+            </tbody>
+        </table>
+
+
+    </div>
+
+    <div class="panel-footer">
+        <button class="btn btn-default back-page">Voltar</button>
+        <a id="btnAddFooter" class="btn btn-primary" href="<?php echo $this->basePath();?>/security/funcionario/adicionar">Adicionar Funcionário</a>
+    </div>
+
+
+</div>
+<script src="<?php echo $this->basePath('js/jquery.mask.min.js');?>" ></script>
+<script>
+    (function( $ ) {
+        $(function(){
+           /* $('.telefone').inputmask({
+                mask: '999-99-999-9999-9'
+            })*/
+            //$('.telefone').mask('(99) 9999 - 9999');
+           /* $('.telefone').focusout(function(){
+                var phone, element;
+                element = $(this);
+                element.unmask();
+                phone = element.val().replace(/\D/g, '');
+                if(phone.length > 10) {
+                    element.mask("(99) 99999-999?9",{placeholder:" "});
+                } else {
+                    element.mask("(99) 9999-9999?9",{placeholder:" "});
+                }
+            }).trigger('focusout');*/
+        })
+    })(jQuery);
+</script>

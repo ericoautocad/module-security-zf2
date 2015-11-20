@@ -1,0 +1,45 @@
+<?php
+$urlPattern = $_SERVER['REQUEST_URI'];
+$formatUrl = function($page) use ($urlPattern) {
+    if(!preg_match('/page/', $urlPattern))
+        return $urlPattern . '/page/' . (int) $page;
+    else
+        return preg_replace('@/page/(\d+)@', '/page/' . (int) $page, $urlPattern);
+};
+?>
+<?php if($this->pageCount > 1): ?>
+    <div class="row pull-right col-lg-12" style="width: auto !important;">
+        <ul class="pagination">
+            <!--impressao do botao para ir para pagina anterior -->
+            <?php if(isset($this->previous)): ?>
+                <li>
+                    <a href="<?php echo $formatUrl($this->previous); ?>" title="Ir para pagina anterior">&laquo;</a>
+                </li>
+            <?php else: ?>
+                <li class="disabled">
+                    <a href="#"  onclick="return false;" >&laquo;</a>
+                </li>
+            <?php endif; ?>
+
+            <!--impressao dos botoes com numeros das paginas -->
+            <?php foreach($this->pagesInRange as $page): ?>
+                <?php if($page != $this->current):?>
+                    <li><a href="<?php echo $formatUrl($page); ?>"><?php echo $page; ?></a>
+                    </li>
+                <?php else: ?>
+                    <li class="active"><a href="#"><?php echo $page; ?></a></li>
+                <?php endif; ?>
+            <?php endforeach; ?>
+
+            <!--impressao do botao para a proxima pagina -->
+            <?php if(isset($this->next)): ?>
+                <li><a href="<?php echo $formatUrl($this->next); ?>" title="Ir para a próxima pagina">&raquo;</a></li>
+            <?php else: ?>
+                <li class="disabled"><a href="#" onclick="return false;" >&raquo;</a> </li>
+            <?php endif; ?>
+        </ul>
+        <p style="text-align: right;">
+            <span> pagina <?php echo $this->current; ?> de <?php echo $this->pageCount; ?></span>
+        </p>
+    </div>
+<?php endif; ?>

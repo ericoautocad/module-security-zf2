@@ -1,0 +1,52 @@
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Grupos de usuários</div>
+    <div class="panel-body">
+
+        <?php if( $this->flashMessenger()->hasMessages('success') ): ?>
+            <?php  echo $this->flashMessenger()->render('success', array('alert', 'alert-dismissible', 'alert-success')); ?>
+        <?php endif; ?>
+        <?php if( $this->flashMessenger()->hasMessages('error') ): ?>
+            <?php  echo $this->flashMessenger()->render('error', array('alert', 'alert-dismissible', 'alert-danger')); ?>
+        <?php endif; ?>
+
+        <div class="">
+            <a class="btn btn-primary" href="/security/grupo/adicionar">Adicionar Grupo</a>
+        </div>
+        <!-- Table -->
+        <table class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Opções</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php if(count($list)): ?>
+                <?php foreach($list as $grupo): ?>
+                    <tr>
+                        <th scope="row"><?php echo $grupo->getId(); ?></th>
+                        <td style="width: 80%;"><?php echo $grupo->getNome(); ?></td>
+                        <td style="width: 5%;">
+                            <a title="Editar Permissões do grupo" href="/security/permissao/gerenciar/<?php echo $grupo->getId(); ?>"><i class="glyphicon glyphicon-pencil"></i></a>
+
+
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            <?php endif; ?>
+
+            </tbody>
+        </table>
+
+        <?php //echo $this->paginationControl($this->data,'Sliding','admin/partials/paginator'); ?>
+    </div>
+
+    <div class="panel-footer">
+        <button class="btn btn-default">Voltar</button>
+        <a class="btn btn-primary" href="/admin/grupo/adicionar">Adicionar Grupo</a>
+    </div>
+
+
+</div>
