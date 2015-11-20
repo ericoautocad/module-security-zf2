@@ -38,6 +38,56 @@ Caso você queira é possível adicionar Urls Desprotegidas da ACL, ou seja recu
 Nome_do_modulo\Controller\Seu_controllerController\sua_action
 
 
+#Recursos do módulo security
+
+url para onde o módulo irá redirecionar após realizar login, contem apenas a tela de boas vindas do zf2 (pode ser personalizada)                                                                                                               
+/security                                                                                                                   
+recurso do sistema para realizar logar                                                                                      
+/security/autenticacao/login                                                                                                 
+recurso do sistema para realizar deslogar                                                                                    
+/security/autenticacao/logout                                                                                                
+recurso do sistema que o usuário usa para alteração de senha                                                                 
+/security/autenticacao/alterar-dados-acesso                                                                                  
+
+Gerenciar Grupos de Usuário                                                                                                                                                                                                                              
+lista os grupos de usuários do sistema                                                                                       
+/security/grupo                                                                                                              
+adicionar grupos de usuários do sistema                                                                                     
+/security/grupo/adicionar                                                                                                   
+editar grupos de usuário do sistema conforme um numero de ID                                                                 
+/security/grupo/editar/ID                                                                                                    
+exclui grupos de usuário do sistema conforme um numero de ID
+/security/grupo/excluir/ID
+
+Gerenciar Usuário/Funcionário
+
+lista os usuários / funcionários do sistema que não é do grupo Super Administrador
+/security/funcionario
+adicionar dados de usuário / funcionário do sistema
+/security/funcionario/adicionar
+editar dados de usuário / funcionário do sistema conforme um numro de ID
+/security/funcionario/editar/ID
+exclui dados de usuário / funcionário conforme um numero de ID
+/security/funcionario/excluir/ID
+
+Gerenciar Permissões de um Grupo (ACL)
+
+lista os grupos possíveis para aplicar a eles os controles de acesso da ACL
+/security/permissao
+exibe as permissões de acesso aos recursos do sitema conforme um numero de ID de grupo do usuário
+/security/permissao/gerenciar/ID
+recurso que salva as permissões configuradas e enviadas via POST para um ID grupo de usuário
+/security/permissao/editar/ID
+
+
+#Considerações finais
+
+Este módulo foi baseado na estrutura de um sistema para empresa, ou seja um usuário está associado a um
+funcionário, porem para o funcionamento básico deste deste modulo eu necessito apenas das entidades:
+Usuario, Grupo, RecursoSistema, PermissaoAcl.
+Se você deseja personalizar seu modulo security removendo a entidade Funcionário. Basta criar seus crud direto
+para a tabela de usuarios e remover as referencias para funcionarios de repository e remover a escrita personalizada
+dos dados de funcionário, na sessão do usuário no ato da autenticação.
 
 
 
