@@ -45,39 +45,39 @@ url para onde o módulo irá redirecionar após realizar login, contem apenas a 
 recurso do sistema para realizar logar                                                                                      
 <b>/security/autenticacao/login</b>                                                                                          
 recurso do sistema para realizar deslogar                                                                                    
-/security/autenticacao/logout                                                                                                
+<b>/security/autenticacao/logout</b>                                                                                    
 recurso do sistema que o usuário usa para alteração de senha                                                                 
-/security/autenticacao/alterar-dados-acesso                                                                                  
+<b>/security/autenticacao/alterar-dados-acesso</b>                                                                       
 
 Gerenciar Grupos de Usuário                                                                                                                                                                                                                                                                                                    
 lista os grupos de usuários do sistema                                                                                       
-/security/grupo                                                                                                              
+<b>/security/grupo</b>                                                                                                  
 adicionar grupos de usuários do sistema                                                                                     
-/security/grupo/adicionar                                                                                                   
+<b>/security/grupo/adicionar</b>                                                                                        
 editar grupos de usuário do sistema conforme um numero de ID                                                                 
-/security/grupo/editar/ID                                                                                                    
+<b>/security/grupo/editar/ID</b>                                                                                        
 exclui grupos de usuário do sistema conforme um numero de ID                                                                
-/security/grupo/excluir/ID                                                                                                   
+<b>/security/grupo/excluir/ID</b>                                                                                       
                                                                                                                              
 Gerenciar Usuário/Funcionário                                                                                                
                                                                                                                              
 lista os usuários / funcionários do sistema que não é do grupo Super Administrador                                           
-/security/funcionario                                                                                                        
+<b>/security/funcionario</b>                                                                                            
 adicionar dados de usuário / funcionário do sistema                                                                         
-/security/funcionario/adicionar                                                                                              
+<b>/security/funcionario/adicionar</b>                                                                                  
 editar dados de usuário / funcionário do sistema conforme um numro de ID                                                    
-/security/funcionario/editar/ID                                                                                             
+<b>/security/funcionario/editar/ID</b>                                                                                       
 exclui dados de usuário / funcionário conforme um numero de ID                                                               
-/security/funcionario/excluir/ID                                                                                             
-                                                                                                                             
+<b>/security/funcionario/excluir/ID</b>                                                                                      
+                                                                                                                            
 Gerenciar Permissões de um Grupo (ACL)                                                                                      
                                                                                                                             
 lista os grupos possíveis para aplicar a eles os controles de acesso da ACL                                                  
-/security/permissao                                                                                                          
+<b>/security/permissao</b>                                                                                                   
 exibe as permissões de acesso aos recursos do sistema conforme um numero de ID de grupo do usuário                           
-/security/permissao/gerenciar/ID                                                                                             
+<b>/security/permissao/gerenciar/ID</b>                                                                                      
 recurso que salva as permissões configuradas e enviadas via POST para um ID grupo de usuário                                 
-/security/permissao/editar/ID                                                                                                 
+<b>/security/permissao/editar/ID</b>                                                                                      
                                                                                                                             
 
 #Considerações finais
