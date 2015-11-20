@@ -48,8 +48,9 @@ recurso do sistema para realizar deslogar
 <b>/security/autenticacao/logout</b>                                                                                    
 recurso do sistema que o usuário usa para alteração de senha                                                                 
 <b>/security/autenticacao/alterar-dados-acesso</b>                                                                       
-
-Gerenciar Grupos de Usuário                                                                                                                                                                                                                                                                                                    
+<br/><br/>    
+Gerenciar Grupos de Usuário
+<br/><br/>                                                                                                                                              
 lista os grupos de usuários do sistema                                                                                       
 <b>/security/grupo</b>                                                                                                  
 adicionar grupos de usuários do sistema                                                                                     
@@ -58,9 +59,9 @@ editar grupos de usuário do sistema conforme um numero de ID
 <b>/security/grupo/editar/ID</b>                                                                                        
 exclui grupos de usuário do sistema conforme um numero de ID                                                                
 <b>/security/grupo/excluir/ID</b>                                                                                       
-                                                                                                                             
+<br/><br/>                                                                                                                             
 Gerenciar Usuário/Funcionário                                                                                                
-                                                                                                                             
+<br/><br/>                                                                                                                            
 lista os usuários / funcionários do sistema que não é do grupo Super Administrador                                           
 <b>/security/funcionario</b>                                                                                            
 adicionar dados de usuário / funcionário do sistema                                                                         
@@ -69,9 +70,9 @@ editar dados de usuário / funcionário do sistema conforme um numro de ID
 <b>/security/funcionario/editar/ID</b>                                                                                       
 exclui dados de usuário / funcionário conforme um numero de ID                                                               
 <b>/security/funcionario/excluir/ID</b>                                                                                      
-                                                                                                                            
+<br/><br/>                                                                                                                   
 Gerenciar Permissões de um Grupo (ACL)                                                                                      
-                                                                                                                            
+<br/><br/>                                                                                                                            
 lista os grupos possíveis para aplicar a eles os controles de acesso da ACL                                                  
 <b>/security/permissao</b>                                                                                                   
 exibe as permissões de acesso aos recursos do sistema conforme um numero de ID de grupo do usuário                           
