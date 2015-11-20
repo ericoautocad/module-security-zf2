@@ -41,9 +41,9 @@ Nome_do_modulo\Controller\Seu_controllerController\sua_action
 #Recursos do módulo security
 
 url para onde o módulo irá redirecionar após realizar login, contem apenas a tela de boas vindas do zf2 (pode ser personalizada)                                                                                                               
-/security                                                                                                                   
+<b>/security</b>                                                                                                        
 recurso do sistema para realizar logar                                                                                      
-/security/autenticacao/login                                                                                                 
+<b>/security/autenticacao/login</b>                                                                                          
 recurso do sistema para realizar deslogar                                                                                    
 /security/autenticacao/logout                                                                                                
 recurso do sistema que o usuário usa para alteração de senha                                                                 
