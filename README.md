@@ -49,7 +49,7 @@ recurso do sistema para realizar deslogar
 recurso do sistema que o usuário usa para alteração de senha                                                                 
 /security/autenticacao/alterar-dados-acesso                                                                                  
 
-Gerenciar Grupos de Usuário                                                                                                                                                                                                                              
+Gerenciar Grupos de Usuário                                                                                                                                                                                                                                                                                                    
 lista os grupos de usuários do sistema                                                                                       
 /security/grupo                                                                                                              
 adicionar grupos de usuários do sistema                                                                                     
@@ -74,7 +74,7 @@ Gerenciar Permissões de um Grupo (ACL)
                                                                                                                             
 lista os grupos possíveis para aplicar a eles os controles de acesso da ACL                                                  
 /security/permissao                                                                                                          
-exibe as permissões de acesso aos recursos do sitema conforme um numero de ID de grupo do usuário                            
+exibe as permissões de acesso aos recursos do sistema conforme um numero de ID de grupo do usuário                           
 /security/permissao/gerenciar/ID                                                                                             
 recurso que salva as permissões configuradas e enviadas via POST para um ID grupo de usuário                                 
 /security/permissao/editar/ID                                                                                                 
